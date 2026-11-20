@@ -4,7 +4,7 @@ import urllib.request
 import urllib.error
 from urllib.parse import urlparse
 
-SECURITY_HEADERS = [('Strict-Transport-Security', 'Força comunicações encriptadas via HTTPS (HSTS).'), ('Content-Security-Policy', 'Restringe o carregamento de recursos contra ataques XSS.'), ('X-Frame-Options', 'Impede ataques de clickjacking bloqueando enquadramentos indevidos.'), ('X-Content-Type-Options', 'Bloqueia vulnerabilidades de MIME-sniffing no navegador.'), ('Referrer-Policy', 'Controla o vazamento de caminhos e dados sensíveis de referência.'), ('Permissions-Policy', 'Aplica o princípio do menor privilégio a APIs de hardware do navegador.')]
+SECURITY_HEADERS = [('Strict-Transport-Security', 'Força comunicações encriptadas via HTTPS e impede ataques de downgrade e interceptação SSL.'), ('Content-Security-Policy', 'Mitiga ataques de injeção de scripts (XSS) e restringe as origens autorizadas para carregamento de recursos.'), ('X-Frame-Options', 'Previne ataques de clickjacking regulando as permissões de incorporação em frames e iframes.'), ('X-Content-Type-Options', 'Impede a execução indevida de arquivos derivados de vulnerabilidades de MIME-sniffing.'), ('Referrer-Policy', 'Protege dados sensíveis contidos em URLs de referência contra vazamento para domínios terceiros.'), ('Permissions-Policy', 'Aplica o princípio do menor privilégio sobre APIs de hardware do navegador (câmera, microfone e geolocalização).')]
 
 def scan_target(target_url):
     print(f"\n[TAVARDT Brasil] Iniciando auditoria perimetral de cabeçalhos de segurança para: {target_url}\n")
@@ -28,7 +28,7 @@ def scan_target(target_url):
                     print(f"  [AUSENTE] {header_name}: {desc}")
                     
             print(f"\n[TAVARDT Brasil] Pontuação Final: {score}/{total}")
-            print(f"\nVerificacao completa online: https://tools.tavardt.com/br/analise-cabecalhos-seguranca/")
+            print(f"\nVerificação completa online: https://tools.tavardt.com/br/analise-cabecalhos-seguranca/")
             print(f"Suporte corporativo e ciberdefesa: https://ag.tavardt.com/br/ciberseguranca/\n")
             
     except urllib.error.URLError as e:

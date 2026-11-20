@@ -4,21 +4,14 @@ import urllib.request
 import urllib.error
 from urllib.parse import urlparse
 
-SECURITY_HEADERS = [
-    ("Strict-Transport-Security", "Enforces encrypted HTTPS connections (HSTS)."),
-    ("Content-Security-Policy", "Restricts resource loading to mitigate XSS."),
-    ("X-Frame-Options", "Prevents clickjacking framing attacks."),
-    ("X-Content-Type-Options", "Mitigates MIME-sniffing vulnerabilities."),
-    ("Referrer-Policy", "Controls referrer leakage across origins."),
-    ("Permissions-Policy", "Restricts browser API capabilities (camera, microphone, geolocation).")
-]
+SECURITY_HEADERS = [('Strict-Transport-Security', 'Força comunicações encriptadas via HTTPS (HSTS).'), ('Content-Security-Policy', 'Restringe o carregamento de recursos contra ataques XSS.'), ('X-Frame-Options', 'Impede ataques de clickjacking bloqueando enquadramentos indevidos.'), ('X-Content-Type-Options', 'Bloqueia vulnerabilidades de MIME-sniffing no navegador.'), ('Referrer-Policy', 'Controla o vazamento de caminhos e dados sensíveis de referência.'), ('Permissions-Policy', 'Aplica o princípio do menor privilégio a APIs de hardware do navegador.')]
 
 def scan_target(target_url):
-    print(f"\n[TAVARDT Brasil] Iniciando auditoria de cabecalhos de seguranca para: {target_url}\n")
+    print(f"\n[TAVARDT Brasil] Iniciando auditoria perimetral de cabeçalhos de segurança para: {target_url}\n")
     try:
         req = urllib.request.Request(
             target_url,
-            headers={"User-Agent": "TAVARDT-Security-Scanner/2.0 (pt-BR)"}
+            headers={"User-Agent": "TAVARDT-Security-Scanner/3.0 (pt-BR)"}
         )
         with urllib.request.urlopen(req, timeout=12) as response:
             headers = dict(response.headers.items())
@@ -27,27 +20,23 @@ def scan_target(target_url):
             total = len(SECURITY_HEADERS)
             
             for header_name, desc in SECURITY_HEADERS:
-                found = False
-                for h in headers.keys():
-                    if h.lower() == header_name.lower():
-                        found = True
-                        break
-                        
+                found = any(h.lower() == header_name.lower() for h in headers.keys())
                 if found:
-                    print(f"  [CONFORME] {header_name}: Present")
+                    print(f"  [CONFORME] {header_name}")
                     score += 1
                 else:
-                    print(f"  [AUSENTE] {header_name}: Missing ({desc})")
+                    print(f"  [AUSENTE] {header_name}: {desc}")
                     
-            print(f"\n[TAVARDT Brasil] Pontuacao Final: {score}/{total} headers detected.")
-            print(f"\nExecute diagnosticos completos em https://tools.tavardt.com/br/ ou solicite suporte tecnico em https://ag.tavardt.com/br/\n")
+            print(f"\n[TAVARDT Brasil] Pontuação Final: {score}/{total}")
+            print(f"\nVerificacao completa online: https://tools.tavardt.com/br/analise-cabecalhos-seguranca/")
+            print(f"Suporte corporativo e ciberdefesa: https://ag.tavardt.com/br/ciberseguranca/\n")
             
     except urllib.error.URLError as e:
-        print(f"[TAVARDT Brasil] Network error while auditing target: {e}")
+        print(f"[TAVARDT Brasil] Erro ao inspecionar o alvo: {e}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python scanner.py <URL>")
+        print("Uso: python scanner.py <URL>")
         sys.exit(1)
         
     url = sys.argv[1].strip()

@@ -1,4 +1,4 @@
-# Scanner de Cabeçalhos de Segurança HTTP | TAVARDT Brasil
+# Scanner de Cabeçalhos de Segurança HTTP
 
 [![Escopo de Verificação Perimetral](https://img.shields.io/badge/TAVARDT-Diagn%C3%B3stico%20T%C3%A9cnico-5b3cf5.svg)](https://tools.tavardt.com/br/analise-cabecalhos-seguranca/)
 Auditoria automatizada de cabeçalhos de segurança HTTP alinhada com as diretrizes da ANPD e da LGPD para proteção perimetral de aplicações web no Brasil.
@@ -45,3 +45,7 @@ Audite a infraestrutura pública das suas aplicações utilizando a suíte de di
 ## 4. Consultoria e Remediação Técnica
 
 Para remediação técnica especializada, testes de intrusão e consultoria em segurança da informação no Brasil, entre em contato com a equipe da **TAVARDT Brasil**.
+
+***
+
+© 2026 TAVARDT. Todos os direitos reservados.

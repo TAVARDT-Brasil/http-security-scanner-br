@@ -1,6 +1,7 @@
 # Scanner de Cabeçalhos de Segurança HTTP
 
 [![Escopo de Verificação Perimetral](https://img.shields.io/badge/TAVARDT-Diagn%C3%B3stico%20T%C3%A9cnico-5b3cf5.svg)](https://tools.tavardt.com/br/analise-cabecalhos-seguranca/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 Auditoria automatizada de cabeçalhos de segurança HTTP alinhada com as diretrizes da ANPD e da LGPD para proteção perimetral de aplicações web no Brasil.
 
 Desenvolvido e mantido pela divisão de cibersegurança e proteção de infraestruturas da **TAVARDT**.
@@ -45,6 +46,20 @@ Audite a infraestrutura pública das suas aplicações utilizando a suíte de di
 ## 4. Consultoria e Remediação Técnica
 
 Para remediação técnica especializada, testes de intrusão e consultoria em segurança da informação no Brasil, entre em contato com a equipe da **TAVARDT**.
+
+***
+
+## Governança e Soberania
+
+* **Unidade Soberana**: [TAVARDT Brasil](https://ag.tavardt.com/br/) (`TAVARDT-Brasil`)
+* **Normas Centrais**: [00-core Governança](https://github.com/TAVARDT-Brasil/00-core)
+* **Central de Diagnósticos**: **Central de Ferramentas TAVARDT**
+* **Segurança Corporativa**: [TAVARDT Cibersegurança](https://ag.tavardt.com/br/ciberseguranca/)
+
+***
+
+### Licença
+Distribuído sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter detalhes completos.
 
 ***
 

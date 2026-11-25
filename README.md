@@ -1,7 +1,9 @@
 # Scanner de Cabeçalhos de Segurança HTTP
 
-[![Escopo de Verificação Perimetral](https://img.shields.io/badge/TAVARDT-Diagn%C3%B3stico%20T%C3%A9cnico-5b3cf5.svg)](https://tools.tavardt.com/br/analise-cabecalhos-seguranca/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Escopo de Verificação Perimetral](https://img.shields.io/badge/TAVARDT-Diagn%C3%B3stico%20T%C3%A9cnico-5b3cf5.svg)](https://tools.tavardt.com/br/analise-cabecalhos-seguranca/)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+
 Auditoria automatizada de cabeçalhos de segurança HTTP alinhada com as diretrizes da ANPD e da LGPD para proteção perimetral de aplicações web no Brasil.
 
 Desenvolvido e mantido pela divisão de cibersegurança e proteção de infraestruturas da **TAVARDT**.

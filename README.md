@@ -1,12 +1,10 @@
 # Scanner de Cabeçalhos de Segurança HTTP
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Escopo de Verificação Perimetral](https://img.shields.io/badge/TAVARDT-Diagn%C3%B3stico%20T%C3%A9cnico-5b3cf5.svg)](https://tools.tavardt.com/br/analise-cabecalhos-seguranca/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 Auditoria automatizada de cabeçalhos de segurança HTTP alinhada com as diretrizes da ANPD e da LGPD para proteção perimetral de aplicações web no Brasil.
-
-Desenvolvido e mantido pela divisão de cibersegurança e proteção de infraestruturas da **TAVARDT**.
 
 ***
 
@@ -37,7 +35,6 @@ python scanner.py exemplo.com.br
 
 Audite a infraestrutura pública das suas aplicações utilizando a suíte de diagnósticos da TAVARDT:
 
-* Verificador de Cabeçalhos de Segurança
 * [Validador de Consent Mode v2 e LGPD](https://tools.tavardt.com/br/validador-consent-mode-v2-lgpd/)
 * [Verificador DMARC e Autenticação de E-mail](https://tools.tavardt.com/br/verificador-dmarc-email/)
 * [Varredura de Arquivos Sensíveis Expostos](https://tools.tavardt.com/br/verificador-arquivos-expostos/)
@@ -60,7 +57,7 @@ Para remediação técnica especializada, testes de intrusão e consultoria em s
 ***
 
 ### Licença
-Distribuído sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter detalhes completos.
+Distribuído sob a Licença MIT.
 
 ***
 
